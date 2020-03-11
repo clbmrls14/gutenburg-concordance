@@ -60,21 +60,5 @@ defmodule GetTextNow do
       File.write(file, "\n", [:append])
     end)
     File.write(file, "\n\n\t\t### END CONCORDANCE ###\n", [:append])
-
-    # file = "output.txt"
-    # File.write(file, "*************************\n")
-    # File.write(file, "****** Concordance ******\n", [:append])
-    # File.write(file, "*************************\n\n", [:append])
-
-    # Enum.map(results, fn i ->
-    #   File.write(file, "name: #{i.word}\n", [:append])
-    #   File.write(file, "#{Enum.count(i.locations)} occurances\n", [:append])
-    #   Enum.map(Enum.take(i.locations, 5), fn j ->
-    #     this_loc = Integer.to_string(j.location)
-    #     File.write(file, "\tBook: #{j.book_title}, Offset: #{this_loc}\n", [:append])
-    #   end)
-    #   File.write(file, "\n", [:append])
-    # end)
-    # File.write(file, "\n\n\t\t### END CONCORDANCE ###\n", [:append])
   end
 end

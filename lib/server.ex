@@ -17,7 +17,6 @@ defmodule Server do
   end
 
   def get_state(word) do
-    #Server.start_link(word)
     GenServer.call(word, :get_state)
   end
 
@@ -28,7 +27,6 @@ defmodule Server do
   @impl true
   def init(initial_state) do
     Registry.register(initial_state.word)
-    #IO.puts("Registering "<>initial_state.word)
 
     {:ok, initial_state}
   end
